@@ -51,8 +51,7 @@ def estrai_route():
     
     try:
         risultati = estrai_eventi(url)
-        #return jsonify({"url": url, "eventi": risultati})
-        return jsonify({risultati})
+        return jsonify({"url": url, "eventi": risultati})
 
     except Exception as e:
         return jsonify({"errore": str(e)}), 500
