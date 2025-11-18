@@ -57,5 +57,5 @@ def estrai_route():
         return jsonify({"errore": str(e)}), 500
 
 
-if __name__ == "__main__":
-    app.run(port=5000, debug=True)
+""" if __name__ == "__main__":
+    app.run(port=5000, debug=True) """
