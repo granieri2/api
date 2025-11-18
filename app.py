@@ -42,11 +42,13 @@ def estrai_eventi(url):
 
 @app.route("/estrai", methods=["GET"])
 def estrai_route():
-    url = request.args.get("url")
+    """ url = request.args.get("url")
 
     if not url:
-        return jsonify({"errore": "Devi passare un parametro ?url=..."}), 400
+        return jsonify({"errore": "Devi passare un parametro ?url=..."}), 400 """
 
+    url = "https://www.unilink.it/ateneo/eventi"
+    
     try:
         risultati = estrai_eventi(url)
         return jsonify({"url": url, "eventi": risultati})
